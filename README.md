@@ -9,6 +9,7 @@ Each subsequent degree you use must connect to the previous degree, and the game
 
 Example:
 Actor 1 > First Degree > Actor 2
+
 Example:
 Actor 1 > First Degree > Second Degree > Actor 2
 
