@@ -1,26 +1,21 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Six Degrees Game
+The game will load two random actors who have not been in the same movie. The player enters the names of up to five actors to connect the two starting actors to each other. This game uses MySQL databases to populate the random actors and cache game data. TMDB API is used to compare movies from starting actors and user inputed actors when validating answers.
 
-## Getting Started
+### Game Description
 
-First, run the development server:
+The goal is to connect the actors in under six degrees of separation. The first degree must be an actor who was on screen with Actor 1, and if they were on screen with both actors you win the game.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Each subsequent degree you use must connect to the previous degree, and the game ends when current degree also connects to actor 2.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Example:
+Actor 1 > First Degree > Actor 2
+Example:
+Actor 1 > First Degree > Second Degree > Actor 2
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
 
+
+## Learn More About This Stack
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
 
 To learn more about Next.js, take a look at the following resources:
 
@@ -29,8 +24,5 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
